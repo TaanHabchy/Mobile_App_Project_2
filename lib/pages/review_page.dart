@@ -15,38 +15,41 @@ class ReviewPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(reviewData.reviewtitle),
-        backgroundColor: backgroundColor,
-      ),
-      body: ListView(
-        children: [
-          Row(
-            children: [
-              const Text("Reviewer: "),
-              Text(reviewData.reviewer),
-            ],
-          ),
-          Row(
-            children: [
-              const Text("Review Title: "),
-              Text(reviewData.title),
-            ],
-          ),
-          Row(
-            children: [
-              const Text("Book Author: "),
-              Text(reviewData.author),
-            ],
-          ),
-          Column(
-            children: [
-              const Text("\nAnalysis: "),
-              Text("    ${reviewData.reviewtext}"),
-            ],
-          ),
-        ],
+    return MaterialApp(
+      theme: ThemeData.dark(),
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text(reviewData.reviewtitle),
+          backgroundColor: backgroundColor,
+        ),
+        body: ListView(
+          children: [
+            Row(
+              children: [
+                const Text("Reviewer: "),
+                Text(reviewData.reviewer),
+              ],
+            ),
+            Row(
+              children: [
+                const Text("Review Title: "),
+                Text(reviewData.title),
+              ],
+            ),
+            Row(
+              children: [
+                const Text("Book Author: "),
+                Text(reviewData.author),
+              ],
+            ),
+            Column(
+              children: [
+                const Text("\nAnalysis: "),
+                Text("    ${reviewData.reviewtext}"),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }

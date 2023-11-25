@@ -42,7 +42,9 @@ class WriteButton extends StatelessWidget {
                     TextField(
                       controller: bookAuthorController,
                       decoration: const InputDecoration(
-                        label: Text("Book Author"),
+                        label: Text(
+                          "Book Author",
+                        ),
                       ),
                     ),
                     TextField(
